@@ -1,0 +1,99 @@
+svnadmin create /var/www/svn/Server_Team_2021
+
+mv /var/www/svn/Server_Team_2021/ /var/www/svn/projects/
+
+Add users to the project
+vim  /var/www/svn/projects/Server_Team_2021/conf/passwd
+
+Copy password from the file below, it contains all user passwords.
+vim /var/www/svn/qms_baselines/conf/passwd
+
+Create a virtual host for a new project.
+<Location /projects/Server_Team_2021>
+        DAV svn
+        SVNPath /var/www/svn/projects/Server_Team_2021
+        AuthType Basic
+        AuthName "Server_Team_2021"
+        AuthUserFile /var/www/svn/projects/Server_Team_2021/conf/passwd
+        Require valid-user
+</Location>
+
+#service httpd restart
+
+Set permission to new project (Server_Team_2021)
+
+chmod 777 -R /var/www/svn/projects/Server_Team_2021/
+
+svn import mytree/ file:///var/www/svn/projects/PRN-558_Oricart \ -m "Initial Commit"
+svn import mytree/ file:///var/www/svn/projects/Server_Team_2021  / -m "Initial Commit"
+svn import mytree file:///var/www/svn/projects/PRN-558_Oricart \
+             -m "Initial import"
+
+ sudo snap install core; sudo snap refresh core
+ 1995  sudo snap install --classic certbot
+ 1996  sudo ln -s /snap/bin/certbot /usr/bin/certbot
+ 1997  sudo certbot --apache
+ 1998  sudo certbot renew --dry-run
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/legalcoms.oricoms.com/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/legalcoms.oricoms.com/privkey.pem
+   Your cert will expire on 2022-07-05. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot again
+   with the "certonly" option. To non-interactively renew *all* of
+   your certificates, run "certbot renew"
+
+
+
+I have been working as a Linux Administrator on Orisis India Consultancy Services for the last 6 years.
+
+I'm mostly involved in server infrastructure, which includes project hosting, server purchases, and server configuration etc. One of my main roles in this company is leading the server team, our team contains 15+ members
+We now manage more than 200 servers Most of the servers are dedicated Linux servers from the cloud like AWS Digital Ocean.And manages shared Linux hosings also. In some of our government projects we use some physical servers, which are located in the state data center.
+
+  sudo apt install gcc make autoconf libc-dev pkg-config libmcrypt-dev php-pear php-dev
+  453  pecl channel-update pecl.php.net
+  454  pecl update-channels
+  455  pecl install mcrypt
+  456  vim php.ini
+  457  systemctyl reload apache2
+  458  systemctl restart apache2
+  459  php -m | grep mcrypt
+  460  php -m
+  461  vim php.ini
+  462  systemctl restart apache2
+  463  php -m
+  464  cd ..
+  465  ls
+  466  cd ..
+  467  ls
+  468  apt install mcrypt
+  469  php -m
+  470  apt install php-mcrypt
+  471  apt-get install php-pecl
+  472  sudo apt-get install libmcrypt-dev libreadline-dev -y
+  473  pecl install mcrypt-1.0.2
+  474  cd 7.4/
+  475  ls
+  476  cd cli/
+  477  ls
+  478  vim php.ini
+  479  php -i | grep 'php.ini'
+  480  php -m | grep mcrypt
+  481  php -m
+  482  systemctl restart apache2
+  483  php -m
+  484  php -m | grep mcrypt
+
+
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'HlPri@teXam456!#$ghhW';
+UPDATE user SET authentication_string=PASSWORD('HlPri@teXam456!#$ghhW') WHERE user='root';
+
+
+FLUSH PRIVILEGES;
+FLUSH PRIVILEGES;
+ALTER USER 'user-name'@'localhost' IDENTIFIED BY 'NEW_USER_PASSWORD';
+
+
